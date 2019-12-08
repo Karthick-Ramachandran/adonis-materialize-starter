@@ -2,14 +2,10 @@
 
 ![Adonis app](material.gif)
 
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
+1. Authentication done
+2. Validation done
+3. Protected routes
+4. Session messages
 
 ## Setup
 
@@ -20,8 +16,6 @@ Clone this repo and create your .env file
 ```bash
 adonis key:generate
 ```
-
-or manually clone the repo and then run `npm install`.
 
 ### Migrations
 
