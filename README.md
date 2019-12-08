@@ -1,6 +1,6 @@
-# Adonis fullstack application
+# Adonis materialize fullstack application
 
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
+![Adonis app](material.gif)
 
 1. Bodyparser
 2. Session
@@ -13,14 +13,15 @@ This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
 
 ## Setup
 
-Use the adonis command to install the blueprint
+Clone this repo and create your .env file
+
+## setup your key
 
 ```bash
-adonis new yardstick
+adonis key:generate
 ```
 
 or manually clone the repo and then run `npm install`.
-
 
 ### Migrations
 
@@ -29,3 +30,5 @@ Run the following command to run startup migrations.
 ```js
 adonis migration:run
 ```
+
+Yeh... Start using the app
