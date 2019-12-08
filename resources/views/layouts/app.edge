@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{--  material css  --}}
+    {{ style('css/material') }}
+    {{--  material icons  --}}
+    {{ style('css/icons') }}
+    {{--  font css  --}}
+    {{ style('font.css') }}
+    {{--  custom style  --}}
+    {{ style('style') }}
+    <title>AdonisJs</title>
+
+</head>
+
+<body>
+    @include('layouts.navbar')
+
+    <div class="container">
+        @!section('content')
+    </div>
+
+    {{--  jquery js  --}}
+
+    {{ script('js/jquery') }}
+
+    {{--  material js  --}}
+
+    {{ script('js/app') }}
+
+    {{--  side nav open with jquery  --}}
+    <script>
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+    });    
+    </script>
+    @if(flashMessage('message'))
+    <script>
+        M.toast({html: '{{ flashMessage("message") }}'})
+    </script>
+    @endif
+    @if(getErrorFor())
+    <script>
+        M.toast({html: '{{ getErrorFor() }}'})
+    </script>
+    @endif
+    <script>
+        function formSubmit() {
+           document.getElementById('logoutForm').submit()
+       }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+@layout('layouts.app')
+
+@section('content')
+<div class="flex">
+    <div class="card white card-width">
+        <div class="card-content">
+            <div class="center card-title">
+                <h3>Register</h3>
+            </div>
+            <form action="/register" method="POST">
+                {{ csrfField() }}
+                <div class="input-field">
+                    <span> <b>Username</b> </span>
+                    <input value="{{ old('username') }}" name="username" type="text" autofocus>
+                </div>
+                <div class="input-field">
+                    <span> <b>Email</b> </span>
+                    <input value="{{ old('email') }}" name="email" type="email">
+                </div>
+                <div class="input-field">
+                    <span> <b>Password</b> </span>
+                    <input id="password" name="password" type="password">
+                </div>
+                <div class="flex">
+                    <button class="btn blue darken-3 waves-effect waves-light" type="submit" name="action">Register
+                        <i class="material-icons right">send</i>
+                    </button> </div>
+            </form>
+        </div>
+    </div>
+</div>
+@endsection
